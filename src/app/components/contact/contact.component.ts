@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -179,9 +180,9 @@ export class ContactComponent {
   errorMessage = '';
   showSuccessMessage = false;
 
-  private emailJsServiceId = 'service_z9wo8ks';
-  private emailJsTemplateId = 'template_4p7qh56';
-  private emailJsPublicKey = 'W_wP4v80uVvz8948Z';
+  private emailJsServiceId = environment.emailjs.serviceId;
+  private emailJsTemplateId = environment.emailjs.templateId;
+  private emailJsPublicKey = environment.emailjs.publicKey;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -198,11 +199,14 @@ export class ContactComponent {
     }
 
     if (
-      this.emailJsServiceId === 'YOUR_EMAILJS_SERVICE_ID' ||
-      this.emailJsTemplateId === 'YOUR_EMAILJS_TEMPLATE_ID' ||
-      this.emailJsPublicKey === 'YOUR_EMAILJS_PUBLIC_KEY'
+      !this.emailJsServiceId ||
+      !this.emailJsTemplateId ||
+      !this.emailJsPublicKey ||
+      this.emailJsServiceId.startsWith('YOUR_') ||
+      this.emailJsTemplateId.startsWith('YOUR_') ||
+      this.emailJsPublicKey.startsWith('YOUR_')
     ) {
-      this.errorMessage = 'Email service is not configured yet. Please set your EmailJS keys.';
+      this.errorMessage = 'Email service is not configured yet. Please set your EmailJS keys in the environment file.';
       return;
     }
 

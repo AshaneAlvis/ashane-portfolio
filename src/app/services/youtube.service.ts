@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
 
 interface YouTubeVideo {
   id: string;
@@ -30,17 +31,21 @@ interface YouTubeApiResponse {
   providedIn: 'root'
 })
 export class YoutubeService {
-  // IMPORTANT: Replace these with your actual values
-  private apiKey = 'AIzaSyBKz0VlXQeI1LG1q7QKnfvtzi7A_Bw97ww'; // Get from https://console.cloud.google.com/
-  private channelId = 'UCfX3i8wXffq39MXxNjbqXiQ'; // Your YouTube channel ID
+  private apiKey = environment.youtube.apiKey;
+  private channelId = environment.youtube.channelId;
   private apiUrl = 'https://www.googleapis.com/youtube/v3/search';
 
   constructor(private http: HttpClient) {}
 
   getVideos(maxResults: number = 6): Observable<YouTubeVideo[]> {
     // If API key is not configured, return empty array
-    if (this.apiKey === 'YOUR_YOUTUBE_API_KEY' || this.channelId === 'YOUR_CHANNEL_ID') {
-      console.warn('YouTube API key or Channel ID not configured. Please update youtube.service.ts');
+    if (
+      !this.apiKey ||
+      !this.channelId ||
+      this.apiKey.startsWith('YOUR_') ||
+      this.channelId.startsWith('YOUR_')
+    ) {
+      console.warn('YouTube API key or Channel ID not configured. Please update your environment file.');
       return of([]);
     }
 
