@@ -88,7 +88,7 @@ export class ProjectsComponent {
       description: 'A modern, responsive portfolio website built with Angular and Tailwind CSS, showcasing my projects and skills.',
       technologies: ['Angular', 'TypeScript', 'Tailwind CSS', 'SCSS'],
       githubUrl: 'https://github.com/AshaneAlvis/ashane-portfolio',
-      liveUrl: 'https://yourportfolio.com',
+      liveUrl: 'https://ashane-portfolio.vercel.app/',
       featured: true
     },
     {
