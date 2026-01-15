@@ -31,8 +31,8 @@ interface YouTubeApiResponse {
 })
 export class YoutubeService {
   // IMPORTANT: Replace these with your actual values
-  private apiKey = 'YOUR_YOUTUBE_API_KEY'; // Get from https://console.cloud.google.com/
-  private channelId = 'YOUR_CHANNEL_ID'; // Your YouTube channel ID
+  private apiKey = 'AIzaSyBKz0VlXQeI1LG1q7QKnfvtzi7A_Bw97ww'; // Get from https://console.cloud.google.com/
+  private channelId = 'UCfX3i8wXffq39MXxNjbqXiQ'; // Your YouTube channel ID
   private apiUrl = 'https://www.googleapis.com/youtube/v3/search';
 
   constructor(private http: HttpClient) {}

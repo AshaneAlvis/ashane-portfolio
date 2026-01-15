@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -54,30 +55,29 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
               <div class="flex items-start gap-4">
                 <div class="p-3 bg-primary-100 rounded-lg">
                   <svg class="w-6 h-6 text-primary-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm9 4a8.96 8.96 0 01-1.5 4.99l1.5 1.5-1.41 1.41-1.5-1.5A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.99-1.5l-1.5 1.5L4.1 19.59l1.5-1.5A8.96 8.96 0 013 12c0-1.82.54-3.51 1.46-4.91L2.9 5.59 4.31 4.18l1.5 1.5A8.96 8.96 0 0112 3c1.82 0 3.51.54 4.91 1.46l1.5-1.5 1.41 1.41-1.5 1.5A8.96 8.96 0 0121 12z"></path>
                   </svg>
                 </div>
                 <div>
-                  <strong class="block text-gray-800 dark:text-gray-200 mb-1">Location</strong>
-                  <p class="text-gray-600 dark:text-gray-300">341/B-2, Mankada Road, Jalathara, Ranala, Sri Lanka<br>Postal Code: 10654</p>
+                  <strong class="block text-gray-800 dark:text-gray-200 mb-1">Availability</strong>
+                  <p class="text-gray-600 dark:text-gray-300">Available worldwide — happy to travel or work remotely.</p>
                 </div>
               </div>
             </div>
             <div class="flex gap-4">
-              <a href="https://github.com/yourusername" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
+              <a href="https://github.com/AshaneAlvis" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
+              <a href="https://www.linkedin.com/in/ashane-alvis/" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
-              <a href="https://twitter.com/yourusername" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
+              <a href="https://x.com/AshaneAlvis" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors" aria-label="X">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <path d="M18.244 2H21.5l-7.11 8.13L22.5 22h-6.6l-5.17-6.77L4.5 22H1.24l7.6-8.69L1.5 2h6.78l4.68 6.2L18.244 2zm-1.16 18h1.83L7.14 4H5.19l11.894 16z"/>
                 </svg>
               </a>
               <a [href]="youtubeUrl" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors">
@@ -151,14 +151,17 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
                 <p *ngIf="contactForm.get('message')?.hasError('required') && contactForm.get('message')?.touched" class="text-red-500 text-sm mt-1">Message is required</p>
               </div>
 
-              <button type="submit" [disabled]="contactForm.invalid"
-                      class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-700 text-white rounded-lg font-medium hover:bg-primary-800 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed shadow-md hover:shadow-lg">
+              <button type="submit" [disabled]="contactForm.invalid || isSending"
+                      class="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary-700 text-white rounded-xl font-semibold tracking-wide shadow-sm hover:bg-primary-800 hover:shadow-md transition-all duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed border-0 outline-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 appearance-none">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                 </svg>
-                Send Message
+                {{ isSending ? 'Sending...' : 'Send Message' }}
               </button>
             </form>
+            <div *ngIf="errorMessage" class="mt-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+              {{ errorMessage }}
+            </div>
             <div *ngIf="showSuccessMessage" class="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
               Message sent successfully! I'll get back to you soon.
             </div>
@@ -171,7 +174,14 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 })
 export class ContactComponent {
   contactForm: FormGroup;
-  youtubeUrl = 'https://www.youtube.com/@yourchannel'; // Update with your channel URL
+  youtubeUrl = 'https://www.youtube.com/channel/UCfX3i8wXffq39MXxNjbqXiQ';
+  isSending = false;
+  errorMessage = '';
+  showSuccessMessage = false;
+
+  private emailJsServiceId = 'service_z9wo8ks';
+  private emailJsTemplateId = 'template_4p7qh56';
+  private emailJsPublicKey = 'W_wP4v80uVvz8948Z';
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -182,19 +192,47 @@ export class ContactComponent {
     });
   }
 
-  showSuccessMessage = false;
+  async onSubmit() {
+    if (this.contactForm.invalid || this.isSending) {
+      return;
+    }
 
-  onSubmit() {
-    if (this.contactForm.valid) {
-      // Here you would typically send the form data to a backend service
-      console.log('Form submitted:', this.contactForm.value);
-      
+    if (
+      this.emailJsServiceId === 'YOUR_EMAILJS_SERVICE_ID' ||
+      this.emailJsTemplateId === 'YOUR_EMAILJS_TEMPLATE_ID' ||
+      this.emailJsPublicKey === 'YOUR_EMAILJS_PUBLIC_KEY'
+    ) {
+      this.errorMessage = 'Email service is not configured yet. Please set your EmailJS keys.';
+      return;
+    }
+
+    this.isSending = true;
+    this.errorMessage = '';
+
+    try {
+      await emailjs.send(
+        this.emailJsServiceId,
+        this.emailJsTemplateId,
+        {
+          name: this.contactForm.value.name,
+          email: this.contactForm.value.email,
+          subject: this.contactForm.value.subject,
+          message: this.contactForm.value.message
+        },
+        this.emailJsPublicKey
+      );
+
       this.showSuccessMessage = true;
       this.contactForm.reset();
-      
+
       setTimeout(() => {
         this.showSuccessMessage = false;
       }, 5000);
+    } catch (error) {
+      this.errorMessage = 'Failed to send message. Please try again later.';
+      console.error('EmailJS error:', error);
+    } finally {
+      this.isSending = false;
     }
   }
 }

@@ -30,7 +30,7 @@ interface YouTubeVideo {
           <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-white to-white/70 rounded-full"></span>
         </h2>
         <div class="text-center mb-12 max-w-2xl mx-auto">
-          <p class="text-lg mb-6 text-white/95">Check out my latest videos on YouTube where I share tutorials, tips, and insights about web development!</p>
+          <p class="text-lg mb-6 text-white/95">An early-stage action game prototype focused on telekinetic combat. Grab objects, throw enemies, and test explosive abilities while exploring a mysterious environment. Currently in white-box development and gameplay testing.</p>
           <a [href]="youtubeChannelUrl" target="_blank" 
              class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-full font-medium hover:bg-red-700 transition-colors shadow-lg">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -71,7 +71,7 @@ interface YouTubeVideo {
               </div>
               <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">{{ truncateText(video.description, 150) }}</p>
               <button (click)="openVideo(video.videoId)" 
-                      class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 bg-primary-700 text-white rounded-lg font-medium hover:bg-primary-800 transition-colors">
+                      class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-primary-600 to-primary-800 text-white rounded-full font-semibold tracking-wide shadow-none hover:-translate-y-0.5 transition-all duration-300 border-0 outline-none focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 appearance-none">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -89,7 +89,7 @@ interface YouTubeVideo {
 export class YoutubeComponent implements OnInit {
   videos: YouTubeVideo[] = [];
   loading = false;
-  youtubeChannelUrl = 'https://www.youtube.com/@yourchannel'; // Update with your channel URL
+  youtubeChannelUrl = 'https://www.youtube.com/channel/UCfX3i8wXffq39MXxNjbqXiQ';
 
   constructor(private youtubeService: YoutubeService) {}
 

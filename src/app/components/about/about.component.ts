@@ -31,7 +31,7 @@ import { CommonModule } from '@angular/common';
                   <img
                     src="assets/Portrait.jpg"
                     alt="Ashane Lahiru Alvis"
-                    class="w-full h-full rounded-full object-cover object-center scale-125 translate-y-5"
+                    class="w-full h-full rounded-full object-cover object-center scale-125 translate-y-6"
                     loading="lazy"
                   />
                 </div>
@@ -68,7 +68,7 @@ import { CommonModule } from '@angular/common';
                     </svg>
                     Get In Touch
                   </a>
-                  <a href="#projects" class="group inline-flex items-center gap-2 px-8 py-4 border-2 border-primary-700 text-primary-700 rounded-full font-semibold hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 active:scale-95">
+                  <a href="#projects" class="group inline-flex items-center gap-2 px-8 py-4 bg-white/90 dark:bg-slate-800/70 text-primary-700 dark:text-primary-200 rounded-full font-semibold shadow-md hover:shadow-xl hover:-translate-y-0.5 hover:bg-gradient-to-r hover:from-primary-50 hover:to-primary-100 dark:hover:from-white/10 dark:hover:to-white/5 transition-all duration-300 active:scale-95">
                     <svg class="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                     </svg>

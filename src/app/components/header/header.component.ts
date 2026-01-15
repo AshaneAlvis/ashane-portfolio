@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
             class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl transition-all duration-500 shadow-lg border-b border-white/20 dark:border-white/10">
       <div class="container mx-auto px-5 flex justify-between items-center h-20">
         <div class="logo group cursor-pointer">
-          <span class="text-3xl font-bold bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent bg-300% animate-gradient group-hover:scale-110 transition-transform duration-300 inline-block">
-            AP
+          <span class="text-2xl font-bold bg-gradient-to-r from-primary-700 via-primary-500 to-primary-400 bg-clip-text text-transparent bg-300% animate-gradient group-hover:scale-110 transition-transform duration-300 inline-block">
+            Ashane's Portfolio
           </span>
         </div>
         <nav class="hidden md:flex gap-1">
@@ -41,10 +41,10 @@ import { CommonModule } from '@angular/common';
           </a>
         </nav>
         <button (click)="toggleDarkMode()"
-                class="hidden md:inline-flex items-center gap-2 px-2 py-1.5 rounded-full bg-gray-100 dark:bg-slate-800/80 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300">
+                class="hidden md:inline-flex items-center gap-2 px-2 py-1.5 rounded-full bg-gray-100/90 dark:bg-slate-800/80 shadow-none transition-all duration-300 border-0 outline-none focus-visible:outline-none focus-visible:ring-0 appearance-none">
           <span class="text-xs font-semibold text-gray-600 dark:text-gray-300 pl-2">Theme</span>
-          <span class="relative inline-flex h-7 w-12 items-center rounded-full bg-white/80 dark:bg-slate-900 border border-gray-200/60 dark:border-white/10 transition-colors duration-300">
-            <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-md transition-transform duration-300"
+          <span class="relative inline-flex h-7 w-12 items-center rounded-full bg-white/90 dark:bg-slate-900/90 transition-colors duration-300">
+            <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 dark:bg-slate-700 shadow-sm transition-transform duration-300"
                   [ngClass]="isDarkMode ? 'translate-x-5' : 'translate-x-1'">
               <svg *ngIf="!isDarkMode" class="h-3.5 w-3.5 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm10-8a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM4 12a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm13.657-7.657a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM8.464 17.536a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17.536 15.536a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zM6.05 6.05a1 1 0 011.414 0l.707.707A1 1 0 016.757 8.17l-.707-.707a1 1 0 010-1.414z"/>
@@ -67,9 +67,9 @@ import { CommonModule } from '@angular/common';
         <div class="flex items-center justify-between px-4 pt-4">
           <span class="text-sm font-semibold text-gray-600 dark:text-gray-300">Theme</span>
           <button (click)="toggleDarkMode()"
-                  class="inline-flex items-center gap-2 px-2 py-1.5 rounded-full bg-gray-100 dark:bg-slate-800/80 border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-md transition-all duration-300">
-            <span class="relative inline-flex h-6 w-10 items-center rounded-full bg-white/80 dark:bg-slate-900 border border-gray-200/60 dark:border-white/10 transition-colors duration-300">
-              <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white dark:bg-slate-700 shadow-md transition-transform duration-300"
+                  class="inline-flex items-center gap-2 px-2 py-1.5 rounded-full bg-gray-100/90 dark:bg-slate-800/80 shadow-none transition-all duration-300 border-0 outline-none focus-visible:outline-none focus-visible:ring-0 appearance-none">
+            <span class="relative inline-flex h-6 w-10 items-center rounded-full bg-white/90 dark:bg-slate-900/90 transition-colors duration-300">
+              <span class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-gray-100 dark:bg-slate-700 shadow-sm transition-transform duration-300"
                     [ngClass]="isDarkMode ? 'translate-x-4' : 'translate-x-1'">
                 <svg *ngIf="!isDarkMode" class="h-3 w-3 text-amber-500" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0-5a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm0 18a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm10-8a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM4 12a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm13.657-7.657a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM8.464 17.536a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17.536 15.536a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zM6.05 6.05a1 1 0 011.414 0l.707.707A1 1 0 016.757 8.17l-.707-.707a1 1 0 010-1.414z"/>

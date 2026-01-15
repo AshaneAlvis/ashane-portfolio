@@ -15,51 +15,61 @@ interface Experience {
   imports: [CommonModule],
   template: `
     <section class="min-h-screen flex items-center py-20 bg-gradient-to-b from-white via-gray-50 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden dark:text-gray-100">
-      <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] dark:hidden"></div>
-      <div class="absolute inset-0 hidden dark:block bg-[linear-gradient(to_right,#ffffff0d_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0d_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+      <div class="absolute inset-0 bg-[url('assets/technology2.png')] bg-center bg-cover opacity-70 dark:opacity-20"></div>
       <div class="container mx-auto px-5 relative z-10">
         <h2 class="text-5xl font-bold text-center mb-16 text-primary-700 relative pb-6 animate-fade-in-up">
           Experience
           <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1.5 bg-gradient-to-r from-transparent via-primary-500 to-transparent rounded-full"></span>
           <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary-700 to-primary-400 rounded-full"></span>
         </h2>
-        <div class="max-w-5xl mx-auto space-y-8">
-          <div *ngFor="let exp of experiences; let i = index" 
-               class="group bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border-l-4 border-primary-700 transform hover:-translate-y-2 relative overflow-hidden animate-fade-in-up border border-white/40 dark:border-white/10"
-               [style.animation-delay.ms]="i * 100">
-            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100/30 to-transparent rounded-full blur-2xl -translate-y-16 translate-x-16"></div>
-            <div class="relative z-10">
-              <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
-                <div>
-                  <h3 class="text-3xl font-bold bg-gradient-to-r from-primary-700 to-primary-500 bg-clip-text text-transparent mb-3 group-hover:scale-105 transition-transform duration-300 inline-block">
-                    {{ exp.title }}
-                  </h3>
-                <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2">
-                    <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
-                    <span class="font-medium">{{ exp.company }}</span>
-                  </div>
-                </div>
-                <div class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 rounded-full font-semibold text-sm shadow-md border border-primary-200/50">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                  </svg>
-                  <span>{{ exp.period }}</span>
+        <div class="max-w-5xl mx-auto relative">
+          <div class="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary-300/60 via-primary-300/20 to-transparent dark:from-primary-400/40 dark:via-primary-400/10"></div>
+          <div class="space-y-12">
+            <div *ngFor="let exp of experiences; let i = index" 
+                 class="relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8"
+                 [style.animation-delay.ms]="i * 140">
+              <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-10">
+                <div class="w-8 h-8 rounded-full bg-white dark:bg-slate-900 border border-primary-200/60 dark:border-primary-400/30 flex items-center justify-center shadow-md">
+                  <div class="w-3.5 h-3.5 rounded-full bg-gradient-to-r from-primary-600 to-primary-400 animate-pulse"></div>
                 </div>
               </div>
-              <div class="border-t border-gray-200/50 dark:border-white/10 pt-6">
-                <ul class="list-none space-y-3 mb-6">
-                  <li *ngFor="let desc of exp.description" class="flex items-start gap-3 text-gray-700 dark:text-gray-300 group/item">
-                    <span class="text-primary-600 font-bold mt-1 text-lg group-hover/item:scale-125 transition-transform duration-300">▸</span>
-                    <span class="leading-relaxed group-hover/item:text-gray-900 dark:group-hover/item:text-white transition-colors">{{ desc }}</span>
-                  </li>
-                </ul>
-                <div class="flex flex-wrap gap-2">
-                  <span *ngFor="let tech of exp.technologies" 
-                        class="px-4 py-1.5 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-white/5 dark:to-white/10 text-gray-700 dark:text-gray-200 rounded-full text-sm font-medium shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 border border-gray-200/50 dark:border-white/10">
-                    {{ tech }}
-                  </span>
+              <div class="group bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 hover:scale-[1.02] relative overflow-hidden animate-fade-in-up border border-white/40 dark:border-white/10"
+                   [ngClass]="i % 2 === 0 ? 'md:col-start-1 md:pr-8' : 'md:col-start-2 md:pl-8'">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-100/30 to-transparent rounded-full blur-2xl -translate-y-16 translate-x-16"></div>
+                <div class="relative z-10">
+                  <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
+                    <div>
+                      <h3 class="text-3xl font-bold bg-gradient-to-r from-primary-700 to-primary-500 bg-clip-text text-transparent mb-3 group-hover:scale-105 transition-transform duration-300 inline-block">
+                        {{ exp.title }}
+                      </h3>
+                    <div class="flex items-center gap-2 text-gray-600 dark:text-gray-300 mb-2">
+                        <svg class="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                        <span class="font-medium">{{ exp.company }}</span>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-primary-50 to-primary-100 text-primary-700 rounded-full font-semibold text-sm shadow-md border border-primary-200/50">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span>{{ exp.period }}</span>
+                    </div>
+                  </div>
+                  <div class="border-t border-gray-200/50 dark:border-white/10 pt-6">
+                    <ul class="list-none space-y-3 mb-6">
+                      <li *ngFor="let desc of exp.description" class="flex items-start gap-3 text-gray-700 dark:text-gray-300 group/item">
+                        <span class="text-primary-600 font-bold mt-1 text-lg group-hover/item:scale-125 transition-transform duration-300">▸</span>
+                        <span class="leading-relaxed group-hover/item:text-gray-900 dark:group-hover/item:text-white transition-colors">{{ desc }}</span>
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2">
+                      <span *ngFor="let tech of exp.technologies" 
+                            class="px-4 py-1.5 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-white/5 dark:to-white/10 text-gray-700 dark:text-gray-200 rounded-full text-sm font-medium shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 border border-gray-200/50 dark:border-white/10">
+                        {{ tech }}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

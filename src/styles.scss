@@ -20,6 +20,20 @@ body {
   overflow-x: hidden;
 }
 
+.code-grid-bg {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='200' viewBox='0 0 280 200'%3E%3Ctext x='18' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='150' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%20%7D%3C/text%3E%3Ctext x='40' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='170' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%7D%3C/text%3E%3Ctext x='22' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='155' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%7D%3C/text%3E%3C/svg%3E");
+  background-size: 260px 180px;
+  background-repeat: repeat;
+}
+
+.code-grid-bg-dark {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='200' viewBox='0 0 280 200'%3E%3Ctext x='18' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23E2E8F0'%3E%3C/%3E%3C/text%3E%3Ctext x='150' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23CBD5F5'%3E%7B%20%7D%3C/text%3E%3Ctext x='40' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23E2E8F0'%3E%3C/%3E%3C/text%3E%3Ctext x='170' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23CBD5F5'%3E%7B%7D%3C/text%3E%3Ctext x='22' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23E2E8F0'%3E%3C/%3E%3C/text%3E%3Ctext x='155' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23CBD5F5'%3E%7B%7D%3C/text%3E%3C/svg%3E");
+  background-size: 260px 180px;
+  background-repeat: repeat;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

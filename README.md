@@ -1,13 +1,14 @@
 # Ashane Portfolio
 
-A modern, responsive portfolio website built with Angular 21 and Angular Material. Showcase your skills, experience, projects, and YouTube videos in a beautiful, professional layout.
+A modern, responsive portfolio website built with Angular 21 and Tailwind CSS. Showcase your skills, experience, projects, and YouTube videos in a clean, professional layout with dark mode support.
 
 ## Features
 
-- 🎨 **Modern UI/UX** - Beautiful design with Angular Material components
+- 🎨 **Modern UI/UX** - Sleek, custom UI built with Tailwind CSS
 - 📱 **Fully Responsive** - Works perfectly on all devices
 - 🎥 **YouTube Integration** - Display your latest YouTube videos
 - 🚀 **Fast & Optimized** - Built with Angular 21 for optimal performance
+- ✉️ **EmailJS Contact Form** - Send messages directly from the site
 - 🎯 **SEO Friendly** - Clean structure and semantic HTML
 - 🌈 **Gradient Themes** - Eye-catching color schemes throughout
 
@@ -126,11 +127,11 @@ You can deploy this portfolio to:
 
 ## Technologies Used
 
-- Angular 21
-- Angular Material 21
+- Angular 21 (standalone components + routing)
 - TypeScript
-- SCSS
+- Tailwind CSS + PostCSS + Autoprefixer
 - RxJS
+- EmailJS
 - YouTube Data API v3
 
 ## License
@@ -143,4 +144,4 @@ If you have any questions or need help customizing your portfolio, feel free to 
 
 ---
 
-Built with ❤️ using Angular and Angular Material
+Built with ❤️ using Angular and Tailwind CSS
