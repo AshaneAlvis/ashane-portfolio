@@ -12,4 +12,12 @@ bootstrapApplication(AppComponent, {
     provideRouter(routes),
     importProvidersFrom(HttpClientModule)
   ]
-}).catch(err => console.error(err));
+})
+  .then(() => {
+    const preloader = document.getElementById('app-preloader');
+    if (preloader) {
+      preloader.classList.add('app-preloader--hide');
+      window.setTimeout(() => preloader.remove(), 450);
+    }
+  })
+  .catch(err => console.error(err));

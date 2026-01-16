@@ -20,6 +20,147 @@ body {
   overflow-x: hidden;
 }
 
+.app-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+
+.app-preloader__backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.15), transparent 55%),
+    linear-gradient(120deg, #0f172a, #111827 45%, #1e293b);
+  opacity: 0.98;
+}
+
+.app-preloader__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.app-preloader__spinner {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  border-top-color: #60a5fa;
+  animation: preloader-spin 1s linear infinite;
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.35);
+}
+
+.app-preloader__text {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.app-preloader__glitch {
+  position: relative;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f8fafc;
+  text-shadow: 0 0 20px rgba(96, 165, 250, 0.5), 0 0 40px rgba(244, 114, 182, 0.35);
+}
+
+.app-preloader__glitch span {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.app-preloader__glitch span:first-child {
+  color: #60a5fa;
+  transform: translate(-4px, 0);
+  clip-path: inset(0 0 60% 0);
+  animation: glitch-slice-1 0.7s infinite steps(2, end);
+}
+
+.app-preloader__glitch span:last-child {
+  color: #f472b6;
+  transform: translate(4px, 0);
+  clip-path: inset(60% 0 0 0);
+  animation: glitch-slice-2 0.65s infinite steps(2, end);
+}
+
+.app-preloader--hide .app-preloader__backdrop {
+  opacity: 0;
+}
+
+.app-preloader--hide .app-preloader__content {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.app-preloader__backdrop,
+.app-preloader__content {
+  transition: opacity 350ms ease, transform 350ms ease;
+}
+
+@keyframes preloader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glitch-slice-1 {
+  0% {
+    clip-path: inset(0 0 60% 0);
+    transform: translate(-6px, -2px) skewX(4deg);
+  }
+  25% {
+    clip-path: inset(12% 0 40% 0);
+    transform: translate(-10px, 2px) skewX(-6deg);
+  }
+  50% {
+    clip-path: inset(22% 0 35% 0);
+    transform: translate(-4px, -4px) skewX(8deg);
+  }
+  75% {
+    clip-path: inset(5% 0 55% 0);
+    transform: translate(-12px, 3px) skewX(-8deg);
+  }
+  100% {
+    clip-path: inset(15% 0 45% 0);
+    transform: translate(-5px, -3px) skewX(6deg);
+  }
+}
+
+@keyframes glitch-slice-2 {
+  0% {
+    clip-path: inset(60% 0 0 0);
+    transform: translate(6px, 2px) skewX(-4deg);
+  }
+  25% {
+    clip-path: inset(45% 0 10% 0);
+    transform: translate(12px, -3px) skewX(6deg);
+  }
+  50% {
+    clip-path: inset(35% 0 20% 0);
+    transform: translate(6px, 4px) skewX(-8deg);
+  }
+  75% {
+    clip-path: inset(55% 0 5% 0);
+    transform: translate(14px, -2px) skewX(8deg);
+  }
+  100% {
+    clip-path: inset(48% 0 8% 0);
+    transform: translate(5px, 3px) skewX(-6deg);
+  }
+}
+
 .code-grid-bg {
   background-image:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='200' viewBox='0 0 280 200'%3E%3Ctext x='18' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='150' y='42' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%20%7D%3C/text%3E%3Ctext x='40' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='170' y='98' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%7D%3C/text%3E%3Ctext x='22' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='22' fill='%23334155'%3E%3C/%3E%3C/text%3E%3Ctext x='155' y='154' font-family='Fira%20Code%2C%20Consolas%2C%20monospace' font-size='20' fill='%23475569'%3E%7B%7D%3C/text%3E%3C/svg%3E");

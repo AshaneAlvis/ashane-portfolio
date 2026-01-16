@@ -11,6 +11,18 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+  <div id="app-preloader" class="app-preloader" aria-label="Loading">
+    <div class="app-preloader__backdrop"></div>
+    <div class="app-preloader__content">
+      <div class="app-preloader__spinner"></div>
+      <div class="app-preloader__glitch" data-text="Loading">
+        <span aria-hidden="true">Loading</span>
+        Loading
+        <span aria-hidden="true">Loading</span>
+      </div>
+      <p class="app-preloader__text">Initializing portfolio</p>
+    </div>
+  </div>
   <app-root></app-root>
 </body>
 </html>
